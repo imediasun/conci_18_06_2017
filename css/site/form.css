@@ -1,0 +1,99 @@
+.form-panel .panel-heading {
+    display: flex;
+    align-items: center;
+    background: none;
+}
+
+.form-panel .panel-heading span {
+    display: block;
+    width: 35px;
+    height: 30px;
+    margin-right: 20px;
+}
+
+.form-panel .panel-heading .welcoming {
+    background: url(../../images/img1.png) center center no-repeat;
+}
+
+.form-panel .panel-heading .clothing {
+    background: url(../../images/img2.png) center center no-repeat;
+}
+
+.form-panel .panel-heading .privacy {
+    background: url(../../images/img3.png) center center no-repeat;
+}
+
+.form-panel .panel-heading .criminal {
+    background: url(../../images/img4.png) center center no-repeat;
+}
+
+.form-panel .panel-heading .check-icon {
+    width: 30px;
+    height: 29px;
+    margin-left: auto;
+    background: url(../../images/check-icon.png) center center no-repeat;
+}
+
+.check-emulator {
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.check-emulator input{
+    display: none;
+}
+
+.check-emulator span {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    background: url(../../images/checkbox-empty.png) center center no-repeat;
+}
+
+.check-emulator input:checked + span {
+    background-image: url(../../images/checkbox-full.png);
+}
+
+.submit-btn {
+    max-width: 300px;
+    margin: 60px auto 0;
+    background: #fd9f00;
+}
+
+.sign_up_base .onoffswitch {
+    width: 140px;
+}
+
+.sign_up_base .onoffswitch-inner:before {
+    content: 'AGREE' !important;
+    padding-left: 20px;
+    background: #fd9f00;
+    text-align: left;
+}
+
+.sign_up_base .onoffswitch-inner:after {
+    content: 'NOT AGREE' !important;
+    color: #fff;
+    background: #b3b3b3;
+}
+
+.sign_up_base .onoffswitch-switch {
+    width: 34px;
+    height: 34px;
+    top: 3px;
+    left: 3px;
+    margin: 0;
+    border-radius: 50%;
+}
+
+.sign_up_base .onoffswitch-checkbox:checked+.onoffswitch-label .onoffswitch-switch {
+    right: auto;
+    left: 102px ;
+}
+
+.onoffswitch {
+    margin: 0 auto 20px;
+}
+
