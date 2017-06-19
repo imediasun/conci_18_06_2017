@@ -10,6 +10,7 @@ class Admin_model extends My_Model
 	public function __construct() 
 	{
 		parent::__construct();
+		var_dump('321');
 
 	}
 	
@@ -27,6 +28,7 @@ class Admin_model extends My_Model
     * This function save the driver details in a file
     */
    public function saveAdminSettings(){
+	   var_dump('123');die;
 		$getAdminSettingsDetails = $this->getAdminSettings();
 		$config = '<?php ';
 		foreach($getAdminSettingsDetails->row() as $key => $val){
@@ -45,6 +47,7 @@ class Admin_model extends My_Model
 		$config .= "\n\$config['base_url'] = '".base_url()."';\n ";
 		$config .= ' ?>';
 		$file = 'commonsettings/dectar_admin_settings.php';
-		file_put_contents($file, $config);
+		
+		var_dump(file_put_contents($file, $config));die;
    }
 }

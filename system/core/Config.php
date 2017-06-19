@@ -60,6 +60,7 @@ class CI_Config {
 	 */
 	function __construct()
 	{
+		
 		$this->config =& get_config();
 		log_message('debug', "Config Class Initialized");
 
@@ -80,6 +81,7 @@ class CI_Config {
 
 			$this->set_item('base_url', $base_url);
 		}
+		
 	}
 
 	// --------------------------------------------------------------------

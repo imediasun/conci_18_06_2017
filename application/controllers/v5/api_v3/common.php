@@ -9,7 +9,9 @@
 class Common extends MY_Controller {
 
 	function __construct(){
+		
         parent::__construct();
+		
 		$this->load->helper(array('cookie','date','form','email'));
 		$this->load->library(array('encrypt','form_validation'));
 		$this->load->model('user_action_model'); 
@@ -130,6 +132,8 @@ class Common extends MY_Controller {
 	*
 	**/	
 	public function get_app_info() {
+		
+		
 
         $returnArr['status'] = '0';
         $returnArr['response'] = '';
@@ -164,6 +168,8 @@ class Common extends MY_Controller {
 			if($this->mailLang!=""){
 				$lang_code = $this->mailLang;
 			}
+			
+			
 			
 			$infoArr =  array(
 				'id'=>$id,

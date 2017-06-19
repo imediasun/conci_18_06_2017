@@ -29,7 +29,9 @@ class MY_Controller extends CI_Controller {
     Public $temp_lang = '';
 
     function __construct() {
+		
         parent::__construct();
+		
         ob_start();
         ob_clean();
 		
@@ -209,6 +211,7 @@ class MY_Controller extends CI_Controller {
 			$this->mailLang = $this->data['langCode'];
         }
         /* Multi language script loader end */
+		
 		
 		
     }

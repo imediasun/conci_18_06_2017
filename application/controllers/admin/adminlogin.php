@@ -19,7 +19,9 @@ class Adminlogin extends MY_Controller {
 		
 		$c_fun = $this->uri->segment(3);
 		$restricted_function = array('save_smtp_settings','admin_global_settings','change_admin_password');
+		var_dump($c_fun);
 		if(in_array($c_fun,$restricted_function) && $this->data['isDemo']===TRUE){
+			
 			$this->setErrorMessage('error','You are in demo version. you can\'t do this action.','admin_template_demo_version');
 			redirect($_SERVER['HTTP_REFERER']); die;
 		}
@@ -55,6 +57,7 @@ class Adminlogin extends MY_Controller {
      * Otherwise load the login form and show the error message
      */
     public function admin_login() {
+		
 		if ($this->lang->line('form_validation_username') != ''){
 			$form_validation_username = stripslashes($this->lang->line('form_validation_username'));
 		}else{
@@ -78,7 +81,7 @@ class Adminlogin extends MY_Controller {
                 $collection = ADMIN;
             }
 
-            /*var_dump($collection);*/
+           
             $condition = array('admin_name' => $name, 'admin_password' => $pwd, 'is_verified' => 'Yes', 'status' => 'Active');
             $query = $this->admin_model->get_all_details($collection, $condition);
 
